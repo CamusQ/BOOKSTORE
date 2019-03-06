@@ -34,7 +34,9 @@
 						<table width="70%" border="0" cellspacing="2" class="upline">
 
 							<tr>
-								<td colspan="3" align="red"><font color="red">${register_err}</font></td>
+								<td></td>
+								<td align="red"><font color="red">${register_err}</font></td>
+								<td></td>
 							</tr>
 							<tr>
 								<td style="text-align:right; width:20%">会员邮箱：</td>
@@ -88,7 +90,7 @@
 						<table width="80%" border="0" cellspacing="2" class="upline">
 							<tr>
 								<td style="text-align:right; width:20%">输入校验码：</td>
-								<td style="width:50%"><input type="text" class="textinput" />
+								<td style="width:50%"><input type="text" class="textinput" name="checkcode"/>
 								</td>
 								<td>&nbsp;</td>
 							</tr>

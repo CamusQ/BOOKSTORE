@@ -21,6 +21,9 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        //1.校验验证码
+        //获取表单的验证码
+
         //1.把参数转成Bean,model
         User user = new User();
         try {
