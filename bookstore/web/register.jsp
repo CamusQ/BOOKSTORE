@@ -91,6 +91,7 @@
 							<tr>
 								<td style="text-align:right; width:20%">输入校验码：</td>
 								<td style="width:50%"><input type="text" class="textinput" name="checkcode"/>
+								<font color="red">${checkcode_err}</font>
 								</td>
 								<td>&nbsp;</td>
 							</tr>

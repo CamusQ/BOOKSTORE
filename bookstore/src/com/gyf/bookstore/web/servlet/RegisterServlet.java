@@ -23,6 +23,15 @@ public class RegisterServlet extends HttpServlet {
 
         //1.校验验证码
         //获取表单的验证码
+        String checkcode_client = request.getParameter("checkcode");
+        String checkcode_session = (String) request.getSession().getAttribute("checkcode_session");
+        if(!checkcode_client.equals(checkcode_session)){
+            //客户端提交的验证码和服务器的不一样，跳回注册页面
+            request.setAttribute("checkcode_err", "验证码不一致");
+            request.getRequestDispatcher("/register.jsp").forward(request, response);
+
+            return;
+        }
 
         //1.把参数转成Bean,model
         User user = new User();
