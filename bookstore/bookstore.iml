@@ -100,15 +100,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.10" level="application_server_libraries" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://E:/tools/mysql/mysql-connector-java-8.0.12.jar!/" />
+          <root url="jar://E:/tools/mysql-connector-java-8.0.12/mysql-connector-java-8.0.12.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.10" level="application_server_libraries" />
   </component>
 </module>
