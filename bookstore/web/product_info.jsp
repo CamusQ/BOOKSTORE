@@ -42,7 +42,7 @@
                                         </div>
 
                                         <div style="text-align:center; margin-top:25px">
-                                            <a href="cart.jsp">
+                                            <a href="${pageContext.request.contextPath}/addCart?id=${product.id}">
                                                 <img src="images/buybutton.gif" border="0"/>
                                             </a>
                                         </div>
