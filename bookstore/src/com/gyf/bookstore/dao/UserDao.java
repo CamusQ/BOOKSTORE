@@ -84,4 +84,6 @@ public class UserDao {
         qr.update(sql, user.getPassword(),user.getGender(),user.getTelephone(),user.getId());
 
     }
+
+
 }
