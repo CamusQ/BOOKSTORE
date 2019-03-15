@@ -92,7 +92,7 @@
 											</td>
 
 											<td class="tableopentd02">${order.paystate == 1 ? '已支付':'未支付'}</td>
-											<td class="tableopentd03"><a href="orderInfo.jsp">查看</a>&nbsp;&nbsp;
+											<td class="tableopentd03"><a href="${pageContext.request.contextPath}/findOrderByOrderId?orderId=${order.id}">查看</a>&nbsp;&nbsp;
 												<a href="#">刪除</a>
 											</td>
 										</tr>

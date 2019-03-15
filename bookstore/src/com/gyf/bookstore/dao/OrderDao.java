@@ -61,7 +61,7 @@ public class OrderDao {
      *
      * 如果模型里有模型，需要自己封装
      */
-    public Order findOrderByOrderId(String orderId) throws SQLException {
+    public static Order findOrderByOrderId(String orderId) throws SQLException {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
 
         //1.查询order表
@@ -70,7 +70,6 @@ public class OrderDao {
         Order order = qr.query(sql1, new BeanHandler<Order>(Order.class),orderId);
 
         //2.查询OrderItem表，把数据封装到Order的items属性
-        OrderItem item = new OrderItem();
 
         String sql2 = "select o.*,p.name,p.price from orderitem o,products p WHERE o.product_id = p.id and order_id = ?";
         //自己封装数据
@@ -105,8 +104,11 @@ public class OrderDao {
         },orderId);
 
         //把items放在order里面
+        order.setItems(mItems);
         return  order;
     }
+
+
 
 
 }
