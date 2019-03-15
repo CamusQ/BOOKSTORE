@@ -2,6 +2,7 @@ package com.gyf.bookstore.dao;
 
 import com.gyf.bookstore.model.Product;
 import com.gyf.bookstore.utils.C3P0Utils;
+import com.gyf.bookstore.utils.ManagerThreadLocal;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -96,6 +97,20 @@ public class ProductDao {
 
             System.out.println(b);
         }
+
+    }
+
+    /**
+     * 更新库存
+     */
+    public void updatePNum(int productId,int num) throws SQLException {
+        String sql = "update products set pnum = pnum - ? where id = ?";
+
+      /*  QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        qr.update(sql,num,productId);*/
+
+        QueryRunner qr = new QueryRunner();
+        qr.update(ManagerThreadLocal.getConnection(),sql,num,productId);
 
     }
 }

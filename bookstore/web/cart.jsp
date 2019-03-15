@@ -30,7 +30,8 @@
             }
 
              //3.如果可以进行加减，对session的购物车数据进行更新
-            alert('更新session购物车数据');
+            // alert('更新session购物车数据');
+            location.href = '${pageContext.request.contextPath}/changeNum?id='+id+'&num='+num;
 
 
         }
@@ -119,7 +120,7 @@
                                                     src="images/gwc_jx.gif" border="0"/> </a>
 
                                             &nbsp;&nbsp;&nbsp;&nbsp;<a
-                                                href="order.jsp"><img
+                                                href="${pageContext.request.contextPath}/settleAccount"><img
                                                 src="images/gwc_buy.gif" border="0"/> </a>
                                         </div>
                                     </td>

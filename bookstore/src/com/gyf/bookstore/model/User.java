@@ -1,8 +1,9 @@
 package com.gyf.bookstore.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
     private int id; // 用户编号
     private String username; // 用户姓名
     private String password; // 用户密码
